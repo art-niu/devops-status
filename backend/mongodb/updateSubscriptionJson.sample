@@ -1,0 +1,84 @@
+
+db.subscription.update({sindex: "elcqpNightlyJobStatus"},{ $set: {
+	"subject" : "AQI Nightly Publishing Status",
+	"sindex" : "elcqpNightlyJobStatus",
+	"contentpage" : "/jobstatus/elcqpNightlyJobStatus.php",
+	"subscribers" : [
+		{
+			"name" : "Arthur Niu",
+			"email" : "aniu@toronto.ca"
+		},
+		{
+			"name" : "Antonio Hon",
+			"email" : "antonio.hon@toronto.ca"
+		},
+		{
+			"name" : "Inderjit Rai",
+			"email" : "inderjit.rai@toronto.ca"
+		},
+		{
+			"name" : "Deval Praikh",
+			"email" : "Deval.Parikh@toronto.ca"
+		},
+		{
+			"name" : "Wei Zheng",
+			"email" : "wei.zheng@toronto.ca"
+		},
+		{
+			"name" : "Prabodha Gunawardena",
+			"email" : "Prabodha.Gunawardena@toronto.ca"
+		},
+		{
+			"name" : "Charis Chui",
+			"email" : "charis.chui@toronto.ca"
+		},
+		{
+			"name" : "Louella Pires",
+			"email" : "louella.pires@toronto.ca"
+		}
+	]
+}}, {upsert: true})
+
+db.subscription.update({sindex: "wasDeploymentJobStatus"},{ $set: {
+	"sindex" : "wasDeploymentJobStatus",
+	"subject" : "WAS Deployment Status",
+	"contentpage" : "/crud/morningUpdateWasDeploymentStatus.php",
+	"subscribers" : [
+		{
+			"name" : "Arthur Niu",
+			"email" : "aniu@toronto.ca"
+		},
+		{
+			"name" : "Antonio Hon",
+			"email" : "antonio.hon@toronto.ca"
+		},
+		{
+			"name" : "James Zhang",
+			"email" : "james.zhang@toronto.ca"
+		},
+		{
+			"name" : "Deval Parikh",
+			"email" : "deval.parikh@toronto.ca"
+		}
+	]
+}}, {upsert: true})
+
+db.subscription.update({sindex: "overallSytstemStatus"},{ $set: {
+	"sindex" : "overallSytstemStatus",
+	"subject" : "Overall System Status",
+	"contentpage" : "/jobstatus/morningUpdates.php",
+	"subscribers" : [
+		{
+			"name" : "Arthur Niu",
+			"email" : "aniu@toronto.ca"
+		},
+		{
+			"name" : "Antonio Hon",
+			"email" : "antonio.hon@toronto.ca"
+		},
+		{
+			"name" : "Deval Parikh",
+			"email" : "deval.parikh@toronto.ca"
+		}
+	]
+}}, {upsert: true})

@@ -1,0 +1,5 @@
+# openssl x509 -in /etc/mongodb/ssl/mongodbserver.pem  -text -noout
+
+# openssl req -new -x509 -days 3650 -out server.crt -keyout encrypted-server.key -config ../http-self-signed-cert.req
+
+

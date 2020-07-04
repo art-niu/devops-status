@@ -1,0 +1,10 @@
+Running on toolbox as root.
+
+below is relative cron job.
+
+11 6-17 * * * /root/tools/oracle/chkOraInstances.sh > /var/tmp/a.log 2>&1| tee /var/tmp/checkOracleInstances.log
+
+IAS Logs 
+/usr2/app/oracle/product/ias/webcache/logs/access_log
+/usr2/app/oracle/product/ias/j2ee/OC4J_BI_Forms/log/OC4J_BI_Forms_default_island_1/default-web-access.log
+/usr2/app/oracle/product/ias/Apache/Apache/logs

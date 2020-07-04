@@ -1,0 +1,22 @@
+
+1. Update collection subscription
+
+mongo  --ssl --sslCAFile /etc/mongodb/ssl/mongodbserver.pem --sslPEMKeyFile /etc/mongodb/ssl/client.pem tcsit subscriptionUpdates.json
+
+2. Load userRoles
+mongoimport  --ssl --sslCAFile /etc/mongodb/ssl/mongodbserver.pem --sslPEMKeyFile /etc/mongodb/ssl/client.pem --db tcsit --collection userroles --mode upsert --file userRoles.json
+
+mongoimport  --db tcsit --collection userroles  --type json --file userRoles.json
+
+3. Update User Roles
+db.userroles.update( { "userid": "aniu"},
+   {         "userid" : "aniu",
+        "active" : 1,
+      "roles": ["infrastructure", "administrator"],
+       "mypage" : "sa.php" },
+   { upsert: true } )  
+   
+db.userroles.deleteOne({ "_id" : ObjectId("588a1558f7e11ad50e48e548")})
+
+
+   

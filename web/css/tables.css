@@ -1,0 +1,53 @@
+/* tables */
+html, body {
+    height: 100%;
+  }
+table.loginTableContainer {
+    position:absolute;
+    top:40%;
+    left:40%; 
+    vertical-align: middle;
+    display: table;
+  }
+table.logintable {
+    border: 0px;
+    margin: 0 auto;
+    vertical-align: middle;
+    height: 100%;
+}
+
+table.bannerTable {
+        font-family:arial;
+        background-color: #CCEEFF;
+        font-size: 10pt;
+        width: 100%;
+}
+
+.responseTd {
+        text-align: left;
+        font-family:arial;
+        background-color: #CCEEFF;
+        font-size: 10pt;
+        word-break: break-all;
+}
+
+.centerTd {
+        text-align: center;
+}
+
+.centerTable {
+    background-color: #CCEEFF;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.outLineTable {
+    width: 100%;
+    border: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.highlight {
+    background-color: #CCEEFF;
+}

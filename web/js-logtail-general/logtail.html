@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<!-- Copyright (c) 2012 Daniel Richman; GNU GPL 3 -->
+<html>
+    <head>
+        <title>habitat parser log viewer</title>
+<script src="/jquery/jquery-3.1.1.min.js" type="text/javascript"></script>
+        <script type="text/javascript" src="/js-logtail-general/logtail.js"></script>
+        <link href="logtail.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <div id="header">
+            <a href="javascript:display_log('../logs/tcs_log','0')">../logs/tcs_log</a>
+            js-logtail.
+            <a href="javascript:display_log('../logs/tcs_log','1')">Reverse</a>
+            <a id="pause" href='#'>Pause</a>.
+            <input type="hidden" name="__logurl" id="__logurl" size="80" value="../logs/tcs_log"/>
+            <input type="hidden" name="__logreverse" id="__logreverse" size="1" value="0"/>
+
+        </div>
+        <pre id="data">Loading...</pre>
+    </body>
+</html>

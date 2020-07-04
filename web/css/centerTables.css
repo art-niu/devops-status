@@ -1,0 +1,47 @@
+/* tables */
+html, body {
+    height: 100%;
+  }
+md, .mssgDiv {
+    color:red;
+    font-family: courier;
+    font-size: 150%;
+}
+
+userLable {
+    color: #02a9fc;
+    font-weight: bold;
+    font-size: 100%;
+}
+
+mandatory {
+    color: #FF0000;
+    font-weight: bold;
+    font-size: 100%;
+}
+
+alert {
+    color: #FF0000;
+    font-weight: bold;
+    font-size: 100%;
+}
+
+requirements {
+    color: red;
+    font-size: 90%;
+}
+
+table.centreTableContainer {
+    position:absolute;
+    top:40%;
+    left:40%; 
+    vertical-align: middle;
+    display: table;
+  }
+table.centretable {
+    border: 0px;
+    margin: 0 auto;
+    vertical-align: middle;
+    height: 100%;
+}
+

@@ -1,0 +1,52 @@
+#!/bin/bash
+# set -x
+# The script is to check Oracle DB instance
+
+if [ $# -lt 1 ]; then
+  echo "%%TCS-E-PARAMETER, url is not found."
+  exit $LINENO
+fi
+
+export ORACLE_HOME=/usr2/app/oracle/product/11.2.0.3
+export PATH=$PATH:$ORACLE_HOME/bin
+export ORACLE_BASE=/usr2/app/oracle
+export LD_LIBRARY_PATH=$ORACLE_HOME/lib
+
+tgtInstance=$1
+tmpFile=/tmp/$$.log
+sqlplusCMD=/usr2/app/oracle/product/11.2.0.3/bin/sqlplus
+$sqlplusCMD /nolog << EOC >$tmpFile 2>&1
+connect cacti/testonly@$tgtInstance
+exit
+EOC
+
+
+# ORA-01017: invalid username/password; logon denied
+# ORA-01034: ORACLE not available
+# ORA-12154: TNS:could not resolve the connect identifier specified
+errCode="ORA-01017 ORA-01034 ORA-12154"
+# 
+errLine=""
+for i in $errCode
+do
+  errLine=`egrep $i $tmpFile`
+  if [ ! -z "$errLine" ]; then
+    case $i in
+    ORA-01017)
+      echo "Instance, $tgtInstance, is up."
+      rm -f $tmpFile
+      exit 0
+      ;;
+    ORA-01034)
+      echo "Instance, $tgtInstance, is down."
+      rm -f $tmpFile
+      exit 2
+      ;;
+    ORA-12154)
+      echo "Instance, $tgtInstance, cannot resolved."
+      rm -f $tmpFile
+      exit 2
+      ;;
+    esac
+  fi
+done

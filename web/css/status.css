@@ -1,0 +1,37 @@
+
+<style>
+.statusSuccessfulTitle {
+    background-color: #4CAF50;
+    color: white;
+    padding: 1px;
+    font-size: 24px;
+    border: none;
+    cursor: context-menu;
+}
+
+.statusFailedTitle {
+    background-color: #FF0000;
+    color: white;
+    padding: 6px;
+    font-size: 2244px;
+    border: none;
+    cursor: context-menu;
+}
+
+.statusSuccessfulMessage {
+    background-color: #4CAF50;
+    color: white;
+    padding: 6px;
+    font-size: 18px;
+    border: none;
+}
+
+.statusFailedMessage {
+    background-color: #FF0000;
+    color: white;
+    padding: 6px;
+    font-size: 18px;
+    border: none;
+}
+
+</style>

@@ -1,0 +1,79 @@
+{
+        "userid" : "aniu",
+        "active" : 1,
+        "roles" : [
+                "infrastructure"
+        ]
+}
+
+{
+        "userid" : "ahon",
+        "active" : 1,
+        "roles" : [
+                "infrastructure"
+        ]
+}
+
+{
+        "userid" : "dparikh",
+        "active" : 1,
+        "roles" : [
+                "infrastructure"
+        ]
+}
+
+{
+        "userid" : "mpopov2",
+        "active" : 1,
+        "roles" : [
+                "dba"
+        ]
+}
+
+{
+        "userid" : "rhenein",
+        "active" : 1,
+        "roles" : [
+                "dba"
+        ]
+}
+
+{
+        "userid" : "twong4",
+        "active" : 1,
+        "roles" : [
+                "helpdesk"
+        ]
+}
+
+{
+        "userid" : "wlee",
+        "active" : 1,
+        "roles" : [
+                "helpdesk"
+        ]
+}
+
+{
+        "userid" : "rfoti",
+        "active" : 1,
+        "roles" : [
+                "helpdesk"
+        ]
+}
+
+{
+        "userid" : "ysrisha",
+        "active" : 1,
+        "roles" : [
+                "helpdesk"
+        ]
+}
+
+{
+        "userid" : "djoseph",
+        "active" : 1,
+        "roles" : [
+                "helpdesk"
+        ]
+}

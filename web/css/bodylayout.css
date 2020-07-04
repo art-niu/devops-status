@@ -1,0 +1,11 @@
+h1 {
+  color: black;
+}
+
+h2 {
+  color: DodgerBlue;
+}
+.copyfrom {
+  position: absolute;
+  left: -9999px;
+}
